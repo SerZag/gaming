@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Elena Siegman - Dead Again.ogg-80b2fe58134cdc913e97d7b218044c85.oggstr"
+
+[deps]
+
+source_file="res://Elena Siegman - Dead Again.ogg"
+dest_files=[ "res://.import/Elena Siegman - Dead Again.ogg-80b2fe58134cdc913e97d7b218044c85.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

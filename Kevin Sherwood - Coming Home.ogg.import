@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Kevin Sherwood - Coming Home.ogg-b3bcea9e784bed1b4b9cc3fc7d7b747b.oggstr"
+
+[deps]
+
+source_file="res://Kevin Sherwood - Coming Home.ogg"
+dest_files=[ "res://.import/Kevin Sherwood - Coming Home.ogg-b3bcea9e784bed1b4b9cc3fc7d7b747b.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

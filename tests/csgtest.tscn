@@ -1,0 +1,45 @@
+[gd_scene format=2]
+
+[node name="Spatial" type="Spatial"]
+
+[node name="CSGBox" type="CSGBox" parent="."]
+visible = false
+invert_faces = true
+width = 11.6627
+height = 7.62207
+depth = 11.1599
+
+[node name="CSGCombiner" type="CSGCombiner" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.47136, -3.45237, -4.72668 )
+visible = false
+
+[node name="CSGBox" type="CSGBox" parent="CSGCombiner"]
+width = 1.29853
+height = 0.0608686
+depth = 0.561539
+
+[node name="CSGBox2" type="CSGBox" parent="CSGCombiner"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.600179, -0.204804, 0.254062 )
+width = 0.0339507
+height = 0.364952
+depth = 0.0263355
+
+[node name="CSGBox3" type="CSGBox" parent="CSGCombiner"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.597636, -0.204804, -0.235466 )
+width = 0.0339507
+height = 0.364952
+depth = 0.0263355
+
+[node name="CSGBox4" type="CSGBox" parent="CSGCombiner"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.577899, -0.204804, 0.199102 )
+width = 0.0339507
+height = 0.364952
+depth = 0.0263355
+
+[node name="CSGBox5" type="CSGBox" parent="CSGCombiner"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.607042, -0.204804, -0.266371 )
+width = 0.0339507
+height = 0.364952
+depth = 0.0263355
+
+[node name="CSGPolygon" type="CSGPolygon" parent="."]

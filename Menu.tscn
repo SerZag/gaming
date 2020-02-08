@@ -1,0 +1,121 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Menu.gd" type="Script" id=1]
+[ext_resource path="res://intro.png" type="Texture" id=2]
+[ext_resource path="res://cont.png" type="Texture" id=3]
+[ext_resource path="res://start.png" type="Texture" id=4]
+[ext_resource path="res://opts.png" type="Texture" id=5]
+[ext_resource path="res://quit.png" type="Texture" id=6]
+[ext_resource path="res://title.png" type="Texture" id=7]
+[ext_resource path="res://Elena Siegman - Dead Again.ogg" type="AudioStream" id=8]
+[ext_resource path="res://fade.png" type="Texture" id=9]
+
+[node name="Menu" type="Node2D" groups=[
+"MenuButton",
+]]
+script = ExtResource( 1 )
+
+[node name="IntroCamera" type="Camera2D" parent="."]
+position = Vector2( 0, 720 )
+anchor_mode = 0
+current = true
+
+[node name="intro" type="Sprite" parent="."]
+position = Vector2( 640, 1080 )
+texture = ExtResource( 2 )
+
+[node name="IntroTween" type="Tween" parent="."]
+
+[node name="MenuTween" type="Tween" parent="."]
+
+[node name="MenuCamera" type="Camera2D" parent="."]
+anchor_mode = 0
+
+[node name="Continue" type="TextureButton" parent="." groups=[
+"MenuButton",
+]]
+margin_left = 60.0
+margin_top = 550.0
+margin_right = 176.0
+margin_bottom = 571.0
+action_mode = 0
+texture_normal = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tween" type="Tween" parent="Continue"]
+
+[node name="Start" type="TextureButton" parent="." groups=[
+"MenuButton",
+]]
+margin_left = 60.0
+margin_top = 580.0
+margin_right = 176.0
+margin_bottom = 610.0
+action_mode = 0
+texture_normal = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tween2" type="Tween" parent="Start"]
+
+[node name="Options" type="TextureButton" parent="." groups=[
+"MenuButton",
+]]
+margin_left = 60.0
+margin_top = 610.0
+margin_right = 176.0
+margin_bottom = 637.0
+action_mode = 0
+texture_normal = ExtResource( 5 )
+
+[node name="Tween3" type="Tween" parent="Options"]
+
+[node name="Quit" type="TextureButton" parent="." groups=[
+"MenuButton",
+]]
+margin_left = 60.0
+margin_top = 640.0
+margin_right = 176.0
+margin_bottom = 664.0
+action_mode = 0
+texture_normal = ExtResource( 6 )
+
+[node name="Tween4" type="Tween" parent="Quit"]
+
+[node name="IntroTimer" type="Timer" parent="."]
+wait_time = 11.0
+one_shot = true
+autostart = true
+
+[node name="title" type="Sprite" parent="."]
+position = Vector2( 120, 500 )
+texture = ExtResource( 7 )
+
+[node name="Secret" type="LineEdit" parent="."]
+margin_left = -60.0
+margin_right = -2.0
+margin_bottom = 24.0
+editable = false
+secret = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DeadAgain" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 8 )
+
+[node name="fade" type="Sprite" parent="."]
+visible = false
+texture = ExtResource( 9 )
+centered = false
+[connection signal="tween_all_completed" from="IntroTween" to="." method="_on_IntroTween_tween_all_completed"]
+[connection signal="mouse_entered" from="Continue" to="." method="_on_Continue_mouse_entered"]
+[connection signal="mouse_entered" from="Start" to="." method="_on_Start_mouse_entered"]
+[connection signal="pressed" from="Start" to="." method="_on_Start_pressed"]
+[connection signal="mouse_entered" from="Options" to="." method="_on_Options_mouse_entered"]
+[connection signal="mouse_entered" from="Quit" to="." method="_on_Quit_mouse_entered"]
+[connection signal="pressed" from="Quit" to="." method="_on_Quit_pressed"]
+[connection signal="timeout" from="IntroTimer" to="." method="_on_IntroTimer_timeout"]

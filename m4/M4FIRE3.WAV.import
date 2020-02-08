@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/M4FIRE3.WAV-89dd5759055f788e560229241850eb2e.sample"
+
+[deps]
+
+source_file="res://m4/M4FIRE3.WAV"
+dest_files=[ "res://.import/M4FIRE3.WAV-89dd5759055f788e560229241850eb2e.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
