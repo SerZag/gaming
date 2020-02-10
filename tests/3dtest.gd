@@ -7,3 +7,5 @@ func _process(delta):
 		$secret.play()
 		secret = 0
 	print(secret)
+
+func open_door():

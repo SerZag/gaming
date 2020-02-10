@@ -1,10 +1,11 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://tests/Player.gd" type="Script" id=1]
 [ext_resource path="res://cross.png" type="Texture" id=2]
 [ext_resource path="res://hpicon.png" type="Texture" id=3]
 [ext_resource path="res://crosscircle.png" type="Texture" id=4]
 [ext_resource path="res://stamina_drain.png" type="Texture" id=5]
+[ext_resource path="res://low_health.png" type="Texture" id=6]
 
 [sub_resource type="CapsuleShape" id=1]
 height = 6.0
@@ -30,6 +31,10 @@ script = ExtResource( 1 )
 [node name="stamina_drain" type="Sprite" parent="."]
 position = Vector2( 640, 360 )
 texture = ExtResource( 5 )
+
+[node name="low_health" type="Sprite" parent="."]
+position = Vector2( 640, 360 )
+texture = ExtResource( 6 )
 
 [node name="Camera" type="Camera" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0 )

@@ -15,4 +15,5 @@ func on_use():
 	if !used:
 		var manager = get_node("..")
 		manager.secret += 1
+		manager.call("open_door")
 		used = true

@@ -177,12 +177,17 @@ func _physics_process(delta):
 	stamina = clamp(stamina, 0, stamina_max)
 	if stamina <= 50:
 		var a = (100-stamina*2)*0.01
-		print(a," ",stamina)
 		$stamina_drain.modulate = Color(1,1,1,a)
 	if stamina > 50:
 		$stamina_drain.modulate = Color(1,1,1,0)
 	if stamina == 0:
 		motion_direction = motion_direction * 0.5
+	
+	if health <= 25:
+		var a = (100-health*4)*0.01
+		$low_health.modulate = Color(1,1,1,a)
+	if health > 25:
+		$low_health.modulate = Color(1,1,1,0)
 	
 	#Приседание
 	if Input.is_action_just_pressed("duck"):
