@@ -119,19 +119,19 @@ func _physics_process(delta):
 		stamina_buff = 0
 		y_velocity = jump_height #Добавление jump_height к вертикальной скорости
 	
-	#Лазанье
-	grabbed = false
-	if !$viewray.is_colliding() && $grabray.is_colliding() && stanging == false:
-		grabbed = true
-	if grabbed:
-		y_velocity = 0
-	if grabbed:
-		motion_direction = motion_direction * 0.2
-	if grabbed && Input.is_action_just_pressed("jump"):
-		$grabray.enabled = false
-		y_velocity = jump_height
-	if stanging && y_motion < 0:
-		$grabray.enabled = true
+#	#Лазанье (Временно отключено т.к. не вписывается в геимплей)
+#	grabbed = false
+#	if !$viewray.is_colliding() && $grabray.is_colliding() && stanging == false:
+#		grabbed = true
+#	if grabbed:
+#		y_velocity = 0
+#	if grabbed:
+#		motion_direction = motion_direction * 0.2
+#	if grabbed && Input.is_action_just_pressed("jump"):
+#		$grabray.enabled = false
+#		y_velocity = jump_height
+#	if stanging && y_motion < 0:
+#		$grabray.enabled = true
 	
 	#Атака
 	#TO DO:

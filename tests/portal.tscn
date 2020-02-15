@@ -1,0 +1,314 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://tests/portal.gd" type="Script" id=2]
+
+[sub_resource type="Environment" id=1]
+ambient_light_color = Color( 1, 1, 1, 1 )
+fog_enabled = true
+fog_depth_begin = 0.0
+fog_depth_end = 44.0
+
+[node name="Spatial" type="Spatial"]
+script = ExtResource( 2 )
+
+[node name="room" type="CSGCombiner" parent="."]
+transform = Transform( 4, 0, 0, 0, 5, 0, 0, 0, 4, 0, 0, 0 )
+use_collision = true
+
+[node name="CSGBox" type="CSGBox" parent="room"]
+width = 10.0
+height = 0.5
+depth = 10.0
+
+[node name="CSGBox2" type="CSGBox" parent="room"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 0 )
+width = 10.0
+height = 0.5
+depth = 10.0
+
+[node name="CSGBox5" type="CSGBox" parent="room"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 2, 0 )
+width = 1.0
+height = 4.0
+depth = 10.0
+
+[node name="CSGBox6" type="CSGBox" parent="room/CSGBox5"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.75, 0 )
+operation = 2
+depth = 1.5
+
+[node name="CSGBox6" type="CSGBox" parent="room"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 2, 0 )
+width = 1.0
+height = 4.0
+depth = 10.0
+
+[node name="CSGBox6" type="CSGBox" parent="room/CSGBox6"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.75, 0 )
+operation = 2
+depth = 1.5
+
+[node name="CSGBox7" type="CSGBox" parent="room"]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 2, 5 )
+width = 1.0
+height = 4.0
+depth = 10.0
+
+[node name="CSGBox6" type="CSGBox" parent="room/CSGBox7"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.75, 0 )
+operation = 2
+depth = 1.5
+
+[node name="CSGBox8" type="CSGBox" parent="room"]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 2, -5 )
+width = 1.0
+height = 4.0
+depth = 10.0
+
+[node name="CSGBox6" type="CSGBox" parent="room/CSGBox8"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.75, 0 )
+operation = 2
+depth = 1.5
+
+[node name="room4" type="CSGCombiner" parent="."]
+transform = Transform( 4, 0, 0, 0, 5, 0, 0, 0, 4, 44, 0, 0 )
+use_collision = true
+
+[node name="CSGBox" type="CSGBox" parent="room4"]
+width = 10.0
+height = 0.5
+depth = 10.0
+
+[node name="CSGBox2" type="CSGBox" parent="room4"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 0 )
+width = 10.0
+height = 0.5
+depth = 10.0
+
+[node name="CSGBox5" type="CSGBox" parent="room4"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 2, 0 )
+width = 1.0
+height = 4.0
+depth = 10.0
+
+[node name="CSGBox6" type="CSGBox" parent="room4/CSGBox5"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.75, 0 )
+operation = 2
+depth = 1.5
+
+[node name="CSGBox6" type="CSGBox" parent="room4"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 2, 0 )
+width = 1.0
+height = 4.0
+depth = 10.0
+
+[node name="CSGBox6" type="CSGBox" parent="room4/CSGBox6"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.75, 0 )
+operation = 2
+depth = 1.5
+
+[node name="CSGBox7" type="CSGBox" parent="room4"]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 2, 5 )
+width = 1.0
+height = 4.0
+depth = 10.0
+
+[node name="CSGBox6" type="CSGBox" parent="room4/CSGBox7"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.75, 0 )
+operation = 2
+depth = 1.5
+
+[node name="CSGBox8" type="CSGBox" parent="room4"]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 2, -5 )
+width = 1.0
+height = 4.0
+depth = 10.0
+
+[node name="CSGBox6" type="CSGBox" parent="room4/CSGBox8"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.75, 0 )
+operation = 2
+depth = 1.5
+
+[node name="room5" type="CSGCombiner" parent="."]
+transform = Transform( 4, 0, 0, 0, 5, 0, 0, 0, 4, -44, 0, 0 )
+use_collision = true
+
+[node name="CSGBox" type="CSGBox" parent="room5"]
+width = 10.0
+height = 0.5
+depth = 10.0
+
+[node name="CSGBox2" type="CSGBox" parent="room5"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 0 )
+width = 10.0
+height = 0.5
+depth = 10.0
+
+[node name="CSGBox5" type="CSGBox" parent="room5"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 2, 0 )
+width = 1.0
+height = 4.0
+depth = 10.0
+
+[node name="CSGBox6" type="CSGBox" parent="room5/CSGBox5"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.75, 0 )
+operation = 2
+depth = 1.5
+
+[node name="CSGBox6" type="CSGBox" parent="room5"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 2, 0 )
+width = 1.0
+height = 4.0
+depth = 10.0
+
+[node name="CSGBox6" type="CSGBox" parent="room5/CSGBox6"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.75, 0 )
+operation = 2
+depth = 1.5
+
+[node name="CSGBox7" type="CSGBox" parent="room5"]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 2, 5 )
+width = 1.0
+height = 4.0
+depth = 10.0
+
+[node name="CSGBox6" type="CSGBox" parent="room5/CSGBox7"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.75, 0 )
+operation = 2
+depth = 1.5
+
+[node name="CSGBox8" type="CSGBox" parent="room5"]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 2, -5 )
+width = 1.0
+height = 4.0
+depth = 10.0
+
+[node name="CSGBox6" type="CSGBox" parent="room5/CSGBox8"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.75, 0 )
+operation = 2
+depth = 1.5
+
+[node name="room2" type="CSGCombiner" parent="."]
+transform = Transform( 4, 0, 0, 0, 5, 0, 0, 0, 4, 0, 0, -44 )
+use_collision = true
+
+[node name="CSGBox" type="CSGBox" parent="room2"]
+width = 10.0
+height = 0.5
+depth = 10.0
+
+[node name="CSGBox2" type="CSGBox" parent="room2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 0 )
+width = 10.0
+height = 0.5
+depth = 10.0
+
+[node name="CSGBox5" type="CSGBox" parent="room2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 2, 0 )
+width = 1.0
+height = 4.0
+depth = 10.0
+
+[node name="CSGBox6" type="CSGBox" parent="room2/CSGBox5"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.75, 0 )
+operation = 2
+depth = 1.5
+
+[node name="CSGBox6" type="CSGBox" parent="room2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 2, 0 )
+width = 1.0
+height = 4.0
+depth = 10.0
+
+[node name="CSGBox6" type="CSGBox" parent="room2/CSGBox6"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.75, 0 )
+operation = 2
+depth = 1.5
+
+[node name="CSGBox7" type="CSGBox" parent="room2"]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 2, 5 )
+width = 1.0
+height = 4.0
+depth = 10.0
+
+[node name="CSGBox6" type="CSGBox" parent="room2/CSGBox7"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.75, 0 )
+operation = 2
+depth = 1.5
+
+[node name="CSGBox8" type="CSGBox" parent="room2"]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 2, -5 )
+width = 1.0
+height = 4.0
+depth = 10.0
+
+[node name="CSGBox6" type="CSGBox" parent="room2/CSGBox8"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.75, 0 )
+operation = 2
+depth = 1.5
+
+[node name="room3" type="CSGCombiner" parent="."]
+transform = Transform( 4, 0, 0, 0, 5, 0, 0, 0, 4, 0, 0, 44 )
+use_collision = true
+
+[node name="CSGBox" type="CSGBox" parent="room3"]
+width = 10.0
+height = 0.5
+depth = 10.0
+
+[node name="CSGBox2" type="CSGBox" parent="room3"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 0 )
+width = 10.0
+height = 0.5
+depth = 10.0
+
+[node name="CSGBox5" type="CSGBox" parent="room3"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 2, 0 )
+width = 1.0
+height = 4.0
+depth = 10.0
+
+[node name="CSGBox6" type="CSGBox" parent="room3/CSGBox5"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.75, 0 )
+operation = 2
+depth = 1.5
+
+[node name="CSGBox6" type="CSGBox" parent="room3"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 2, 0 )
+width = 1.0
+height = 4.0
+depth = 10.0
+
+[node name="CSGBox6" type="CSGBox" parent="room3/CSGBox6"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.75, 0 )
+operation = 2
+depth = 1.5
+
+[node name="CSGBox7" type="CSGBox" parent="room3"]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 2, 5 )
+width = 1.0
+height = 4.0
+depth = 10.0
+
+[node name="CSGBox6" type="CSGBox" parent="room3/CSGBox7"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.75, 0 )
+operation = 2
+depth = 1.5
+
+[node name="CSGBox8" type="CSGBox" parent="room3"]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 2, -5 )
+width = 1.0
+height = 4.0
+depth = 10.0
+
+[node name="CSGBox6" type="CSGBox" parent="room3/CSGBox8"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.75, 0 )
+operation = 2
+depth = 1.5
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 0, 6, 0 )
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource( 1 )

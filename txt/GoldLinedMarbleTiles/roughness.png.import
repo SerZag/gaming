@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/cross.png-bcc6b28a9469641d0e5e0111af55c5b8.s3tc.stex"
-path.etc2="res://.import/cross.png-bcc6b28a9469641d0e5e0111af55c5b8.etc2.stex"
+path.s3tc="res://.import/roughness.png-0c1954c96dfa69e85b092e7420c04c4d.s3tc.stex"
+path.etc2="res://.import/roughness.png-0c1954c96dfa69e85b092e7420c04c4d.etc2.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc2" ],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://cross.png"
-dest_files=[ "res://.import/cross.png-bcc6b28a9469641d0e5e0111af55c5b8.s3tc.stex", "res://.import/cross.png-bcc6b28a9469641d0e5e0111af55c5b8.etc2.stex" ]
+source_file="res://txt/GoldLinedMarbleTiles/roughness.png"
+dest_files=[ "res://.import/roughness.png-0c1954c96dfa69e85b092e7420c04c4d.s3tc.stex", "res://.import/roughness.png-0c1954c96dfa69e85b092e7420c04c4d.etc2.stex" ]
 
 [params]
 

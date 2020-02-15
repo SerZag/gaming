@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/cross.png-bcc6b28a9469641d0e5e0111af55c5b8.s3tc.stex"
-path.etc2="res://.import/cross.png-bcc6b28a9469641d0e5e0111af55c5b8.etc2.stex"
+path.s3tc="res://.import/albedo.png-d39d0d7554584c14e01917b35c8518af.s3tc.stex"
+path.etc2="res://.import/albedo.png-d39d0d7554584c14e01917b35c8518af.etc2.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc2" ],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://cross.png"
-dest_files=[ "res://.import/cross.png-bcc6b28a9469641d0e5e0111af55c5b8.s3tc.stex", "res://.import/cross.png-bcc6b28a9469641d0e5e0111af55c5b8.etc2.stex" ]
+source_file="res://txt/GoldLinedMarbleTiles/albedo.png"
+dest_files=[ "res://.import/albedo.png-d39d0d7554584c14e01917b35c8518af.s3tc.stex", "res://.import/albedo.png-d39d0d7554584c14e01917b35c8518af.etc2.stex" ]
 
 [params]
 
@@ -25,7 +25,7 @@ flags/repeat=true
 flags/filter=true
 flags/mipmaps=true
 flags/anisotropic=false
-flags/srgb=2
+flags/srgb=1
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/HDR_as_SRGB=false
